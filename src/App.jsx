@@ -10,7 +10,7 @@ export default function App() {
   // Fetch movies from TMDB API
   const fetchMovies = async (searchTerm) => {
     try {
-      const API_KEY = "YOUR_TMDB_API_KEY"; // 👈 Replace this with your key
+      const API_KEY = "YOUR_TMDB_API_KEY"; // 👈 Replace with your TMDB API key
       const response = await axios.get(
         `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${searchTerm}`
       );
