@@ -1,20 +1,14 @@
-import "./App.css";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import MovieCardsPage from "./pages/MovieCardsPage";
+
 
 export default function App() {
-  return (
-    <div className="landing">
-      <div className="overlay">
-        <div className="content">
-          <h1 className="logo">
-            🎬 <span>MOVIEHUB</span>
-          </h1>
-          <h2 className="title">Discover Movies Instantly!</h2>
-          <p className="subtitle">
-            Dive into the world of cinema — your next favorite movie awaits.
-          </p>
-          <button className="watch-btn">Watch More</button>
-        </div>
-      </div>
-    </div>
-  );
+return (
+<Routes>
+<Route path="/" element={<LandingPage />} />
+<Route path="/movies" element={<MovieCardsPage />} />
+</Routes>
+);
 }

@@ -1,13 +1,19 @@
-// src/components/MovieCard.jsx
+import React from "react";
+import "../styles.css";
+
+
 export default function MovieCard({ movie }) {
-  return (
-    <div className="card">
-      <img src={movie.poster} alt={movie.title} />
-      <h2>
-        {movie.title} ({movie.year})
-      </h2>
-      <p>⭐ {movie.rating}</p>
-      <p className="desc">{movie.description}</p>
-    </div>
-  );
+return (
+<div className="movie-card">
+<img src={movie.poster_path} alt={movie.title} className="movie-img" />
+
+
+<div className="movie-details">
+<h3 className="movie-title">{movie.title}</h3>
+<p className="movie-year">{movie.release_date.slice(0, 4)}</p>
+<p className="movie-overview">{movie.overview}</p>
+<p className="movie-pop">🔥 {movie.popularity}</p>
+</div>
+</div>
+);
 }
